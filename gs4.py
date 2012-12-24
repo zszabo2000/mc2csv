@@ -5,7 +5,7 @@ import requests
 import string
 
 r = requests.get('http://malc0de.com/database/')
-htdoc=r.text
+htdoc=r.content
 soup = BeautifulSoup(htdoc)
 table = soup.find("table",{"class": "prettytable"})
 
